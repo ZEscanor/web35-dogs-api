@@ -1,0 +1,26 @@
+{
+  "name": "web35-dogs-api",
+  "version": "1.0.0",
+  "description": "for dogs",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZEscanor/web35-dogs-api.git"
+  },
+  "author": "Z Amusa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZEscanor/web35-dogs-api/issues"
+  },
+  "homepage": "https://github.com/ZEscanor/web35-dogs-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
