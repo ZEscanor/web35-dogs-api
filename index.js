@@ -60,6 +60,23 @@ server.post('/dogs',(req,res)=> {
 
 })
 
+server.delete('/dogs/:id',(req,res)=>{
+    const {id} = req.params
+    const findDogById = dog => {
+        return dog.id == id
+    }
+    const foundDog = dogs.find(findDogById)
+    if(!foundDog){
+        res.status(400).json({errorMessage:"cant find ID"})
+    }
+    else{
+        dogs = dogs.filter((dog)=>{
+            return dog.id != id
+        })
+        res.json({deleted: foundDog})
+    }
+})
+
 
 //Important to call the before your use or else your app wont read /dogs
 
