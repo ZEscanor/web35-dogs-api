@@ -6,9 +6,7 @@ const cors = require('cors')
 const uuid = require('uuid')
 server.use(express.json())
 server.use(cors())
-server.use('/', (req,res) =>{
-    res.status(200).json({message:"Hello THE WORLD"})
-})
+
 //seed data
 let dogs = [{
     id:uuid.v4(),
@@ -24,6 +22,11 @@ server.get('/dogs',(req,res)=>{
         res.status(500).json({errorMessage: "Cannot get DOGS LOL"})
     }
 })
+
+server.use('/', (req,res) =>{
+    res.status(200).json({message:"Hello THE WORLD"})
+})
+
 // const PORT = 5000
 const PORT = process.env.PORT || 5000
 
